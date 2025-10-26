@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Магазин детских книг</title>
+</head>
+
+<body>
+    <header class="container">
+        <div class="header-top">
+            <h1 class="logo">Книги детям</h1>
+            <button id="theme-toggle" title="Сменить тему"><i class="fas fa-moon"></i></button>
+        </div>
+        <div class="search-block">
+            <input type="search" id="search-input" placeholder="Введите название книги..." />
+            <button id="search-btn" class="fa fa-search" title="Найти"></button>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="filters">
+            <label for="category-select">Категория:</label>
+            <select id="category-select">
+                <option value="">Все</option>
+                <option value="школа">Школа</option>
+                <option value="сказка">Сказки</option>
+                <option value="приключения">Приключения</option>
+                <option value="познавательные">Познавательные</option>
+                 <option value="малыши">Для малышей</option>
+            </select>
+        </div>
+
+        <div class="controls">
+            <select id="sort-select">
+                <option value="">Сортировка</option>
+                <option value="name-asc">По названию (А–Я)</option>
+                <option value="name-desc">По названию (Я–А)</option>
+                <option value="price-asc">Сначала дешёвые</option>
+                <option value="price-desc">Сначала дорогие</option>
+                <option value="rating-desc">По рейтингу</option>
+            </select>
+        </div>
+
+        <section id="shop-items"></section>
+        <p id="nothing-found" class="message"></p>
+    </main>
+
+    <footer class="container">
+        <p>&copy; 2025 Магазин детских книг</p>
+    </footer>
+
+
+    <template id="item-template">
+        <div class="book-card">
+        <img src="" alt="" />
+        <div class="book-content">
+            <div class="book-info"> 
+                <h2 class="book-title"></h2>        
+                <p class="book-author"></p>         
+                <p class="book-description"></p> 
+            </div>   
+            <div class="book-tags"></div>       
+            <div class="book-footer">
+                <span class="book-price"></span>  
+                <span class="book-rating"></span> 
+             </div>
+        </div>
+        </div>
+    </template>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
